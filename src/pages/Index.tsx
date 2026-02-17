@@ -47,7 +47,7 @@ export default function Index() {
                 className="pl-10"
               />
             </div>
-            <Button onClick={() => navigate("/workspace/doc-1")}>
+            <Button onClick={() => navigate("/new-parse")}>
               <Plus className="w-4 h-4 mr-2" /> New Parse
             </Button>
           </div>

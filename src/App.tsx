@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import NewParse from "./pages/NewParse";
 import Workspace from "./pages/Workspace";
 import NotFound from "./pages/NotFound";
 
@@ -17,6 +18,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/new-parse" element={<NewParse />} />
           <Route path="/workspace/:id" element={<Workspace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
