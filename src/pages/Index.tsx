@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Search, Plus, FileText, Image, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,7 @@ const statusStyles: Record<string, string> = {
 
 export default function Index() {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   const filtered = documents.filter((d) => d.title.toLowerCase().includes(search.toLowerCase()));
 
   return (
@@ -46,7 +47,7 @@ export default function Index() {
                 className="pl-10"
               />
             </div>
-            <Button>
+            <Button onClick={() => navigate("/workspace/doc-1")}>
               <Plus className="w-4 h-4 mr-2" /> New Parse
             </Button>
           </div>
